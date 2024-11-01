@@ -62,10 +62,12 @@ export async function POST(request) {
         });
 
         console.log("Message sent: %s", info.messageId);
+        return info;
         // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
     }
     main().catch(console.error);
 
     // console.log("Data: ", name, email, message, number)
+    console.log("info: ", main())
     return NextResponse.json({ name, email, message, number })
 }
