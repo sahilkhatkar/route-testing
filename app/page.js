@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import styles from './page.module.css'
 
-const Page = () => {
+export default function Page() {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
@@ -67,75 +67,72 @@ const Page = () => {
   return (
     <div className={styles.page}>
 
-        <form className={styles.main} method="post" onSubmit={handleSubmit}>
-          {/* Your form elements go here */}
-          <label
-            htmlFor="name"
-            className="block text-sm font-medium text-gray-700 ml-2 my-2"
-          >
-            Name
-          </label>
-          <input
-            type="text"
-            id="name"
-            name="name"
-            onChange={handleChange}
-            className="mt-1 p-2 border-2 rounded-full w-full"
-            required
-          />
-          <label
-            htmlFor="email"
-            className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
-          >
-            Email
-          </label>
-          <input
-            type="email"
-            id="email"
-            name="email"
-            onChange={handleChange}
-            className="mt-1 p-2 border-2 rounded-full w-full"
-            required
-          />
-          <label
-            htmlFor="number"
-            className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
-          >
-            Contact Number
-          </label>
-          <input
-            type="tel"
-            id="number"
-            name="number"
-            onChange={handleChange}
-            className="mt-1 p-2 border-2 rounded-full w-full"
-            required
-          />
-          <label
-            htmlFor="message"
-            className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
-          >
-            Message
-          </label>
-          <textarea
-            id="message"
-            name="message"
-            onChange={handleChange}
-            className="mt-1 p-2 border-2 rounded-full w-full text-sm"
-            required
-          ></textarea>
+      <form className={styles.main} method="post" onSubmit={handleSubmit}>
+        {/* Your form elements go here */}
+        <label
+          htmlFor="name"
+          className="block text-sm font-medium text-gray-700 ml-2 my-2"
+        >
+          Name
+        </label>
+        <input
+          type="text"
+          id="name"
+          name="name"
+          onChange={handleChange}
+          className="mt-1 p-2 border-2 rounded-full w-full"
+          required
+        />
+        <label
+          htmlFor="email"
+          className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
+        >
+          Email
+        </label>
+        <input
+          type="email"
+          id="email"
+          name="email"
+          onChange={handleChange}
+          className="mt-1 p-2 border-2 rounded-full w-full"
+          required
+        />
+        <label
+          htmlFor="number"
+          className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
+        >
+          Contact Number
+        </label>
+        <input
+          type="tel"
+          id="number"
+          name="number"
+          onChange={handleChange}
+          className="mt-1 p-2 border-2 rounded-full w-full"
+          required
+        />
+        <label
+          htmlFor="message"
+          className="block text-sm font-medium text-gray-700 ml-2 mt-4 mb-2"
+        >
+          Message
+        </label>
+        <textarea
+          id="message"
+          name="message"
+          onChange={handleChange}
+          className="mt-1 p-2 border-2 rounded-full w-full text-sm"
+          required
+        ></textarea>
 
-          {/* Add other form fields similarly */}
+        {/* Add other form fields similarly */}
 
-          <button
-            type="submit"
-            className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full w-full hover:bg-gray-700 hover:shadow"
-          >submit
-          </button>
-        </form>
+        <button
+          type="submit"
+          className="bg-gray-900 text-white py-2 px-4 mt-4 rounded-full w-full hover:bg-gray-700 hover:shadow"
+        >submit
+        </button>
+      </form>
     </div>
   );
 };
-
-
-export default page;
