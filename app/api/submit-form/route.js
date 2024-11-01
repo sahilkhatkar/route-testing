@@ -65,9 +65,16 @@ export async function POST(request) {
         return info;
         // Message sent: <d786aa62-4e0a-070a-47ed-0b0666549519@ethereal.email>
     }
-    main().catch(console.error);
+    try {
+        let res = (await main()).messageId
+        console.log("info: ", res)
+        return NextResponse.json({ name, email, message, number, id: res })
+
+    } catch (error) {
+        console.log(error)
+    }
+    // main().catch(console.error);
 
     // console.log("Data: ", name, email, message, number)
-    console.log("info: ", main())
-    return NextResponse.json({ name, email, message, number })
+    return NextResponse.json({ name, email, message, number, id: messageid })
 }
