@@ -37,7 +37,8 @@ export default function Page() {
       console.log("Uploading data...");
       const response = await fetch(
         // "https://m.designindianhomes.com/submitForm",
-        "/api/submit-form",
+        // "/api/submit-form",
+        process.env.FORM_SUBMIT_API_URL,
         {
           method: "POST",
           // mode: "no-cors",

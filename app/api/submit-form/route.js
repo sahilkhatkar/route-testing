@@ -13,6 +13,10 @@ const transporter = nodemailer.createTransport({
     },
 });
 
+export async function GET(request) {
+    return NextResponse.json({ "status": "working" })
+}
+
 export async function POST(request) {
     const formData = await request.formData()
     const name = formData.get('name')
