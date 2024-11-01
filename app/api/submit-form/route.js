@@ -73,8 +73,7 @@ export async function POST(request) {
     } catch (error) {
         console.log(error)
     }
-    // main().catch(console.error);
-
+    
     // console.log("Data: ", name, email, message, number)
-    return NextResponse.json({ name, email, message, number, id: messageid })
+    return NextResponse.json({ name, email, message, number })
 }
