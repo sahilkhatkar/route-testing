@@ -3,7 +3,7 @@
 import React, { useState, useEffect } from "react";
 import styles from './page.module.css'
 
-const page = () => {
+const Page = () => {
   const [formData, setFormData] = useState({
     name: "",
     email: "",
