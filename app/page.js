@@ -38,10 +38,11 @@ export default function Page() {
       const response = await fetch(
         // "https://m.designindianhomes.com/submitForm",
         // "/api/submit-form",
-        process.env.FORM_SUBMIT_API_URL,
+        "https://route-testing-hugytd.vercel.app/api/submit-form",
+        // process.env.FORM_SUBMIT_API_URL,
         {
           method: "POST",
-          // mode: "no-cors",
+          mode: "no-cors",
           body: formDataToSend,
         }
       );
